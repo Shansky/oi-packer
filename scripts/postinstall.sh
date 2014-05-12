@@ -31,7 +31,8 @@ lofiadm -d $VBGADEV
 rm -f VBoxGuestAdditions.iso
 
 echo "Adding Vagrant user to sudoers"
-echo "vagrant ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers
+echo "root ALL=(ALL) ALL" > /etc/sudoers
+echo "vagrant ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 echo 'Defaults env_keep += "SSH_AUTH_SOCK"' >> /etc/sudoers
 chmod 0440 /etc/sudoers
 
@@ -52,7 +53,7 @@ chown vagrant:other /export/home/vagrant/.ssh/authorized_keys
 #sed -i -e "s/PermitRootLogin yes/PermitRootLogin no/" /etc/ssh/sshd_config
 #svcadm restart ssh
 
-# Upgrading OpenIndiana 
+# Upgrading OpenIndiana
 # see http://wiki.openindiana.org/oi/Upgrading+OpenIndiana
 
 # update grub menu to lower timeout to 5 seconds

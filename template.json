@@ -72,7 +72,9 @@
   "provisioners": [
     {
       "scripts": [
-        "scripts/postinstall.sh"
+        "scripts/postinstall.sh",
+        "scripts/pkgsrcinstall.sh",
+        "scripts/puppet.sh"
       ],
       "type": "shell"
     }
