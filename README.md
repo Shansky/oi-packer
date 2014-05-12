@@ -10,3 +10,6 @@ Notes:
 
  * A single ZFS pool (rpool) is created for the entire disk
  * The VM is set to have 1024MB of RAM and a 40GB drive
+ * Automated install of lates pkgsrc bootstrap for illumos from joyent
+ * Installation of ruby 2.1.1 using pkgin
+ * Puppet from gems
